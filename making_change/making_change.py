@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import sys
+from time import time
 
 def making_change(amount, denominations, cache=None):
   if cache == None:
@@ -15,7 +16,11 @@ def making_change(amount, denominations, cache=None):
   
   return cache[amount]
 
-print(making_change(10000, [1, 5, 10, 25, 50]))
+start = time()
+print(making_change(100000000, [1, 5, 10, 25, 50]))
+end = time()
+print('time', end - start)
+
 
 if __name__ == "__main__":
   # Test our your implementation from the command line
