@@ -17,7 +17,7 @@ def making_change(amount, denominations, cache=None):
   return cache[amount]
 
 start = time()
-print(making_change(100000000, [1, 5, 10, 25, 50]))
+print(making_change(12, [1, 5, 10, 25, 50]))
 end = time()
 print('time', end - start)
 

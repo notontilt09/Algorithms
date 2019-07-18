@@ -3,13 +3,18 @@
 import math
 
 def recipe_batches(recipe, ingredients):
+  # an array that holds the number of batches we can make per ingredient 
   multiples = []
-  for i in recipe:
-    if i not in ingredients.keys():
+  # loop through the recipe items
+  for item in recipe:
+    # if the recipe item isn't in ingredients return 0
+    if item not in ingredients:
       return 0
+    # otherwise append the max batches we can make just using that ingredient
     else:
-      multiples.append( ingredients[i] // recipe[i] )
+      multiples.append( ingredients[item] // recipe[item] )
   
+  # final answer is the minimum of the multiples array
   return (min(multiples))
 
 
